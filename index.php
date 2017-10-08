@@ -99,11 +99,11 @@ echo "Ваш новый пароль - ".PASSWORD2;  <br>
 <?php
 //Четвертое задание
 echo "<h2>Задание №4</h2>";
-$age4 = "18";
-if ($age4 <= "65" && $age4 >= "18") {
+$age4 = 18;
+if ($age4 <= 65 && $age4 >= 18) {
     echo "Вам еще работать и работать!";
 }    
-elseif ($age4 <"18") {
+elseif ($age4 < 18) {
     echo "Вам еще рано работать";
 }
 else {
@@ -147,14 +147,14 @@ else {<br>
 <?php
 //Пятое задание
 echo "<h2>Задание №5</h2>";
-$day = "6";
-switch ($day) {
-    case $day <6:
-        echo "Это рабочий день!";
-        break;
-    case $day>7:
+$day = 0;
+switch (true) {
+    case ($day > 7 || $day < 1):
         echo "Неизвестный день!";
         break;
+    case $day < 6:
+        echo "Это рабочий день!";
+        break;    
     default:
         echo "Это выходной день!";
 }
