@@ -5,7 +5,7 @@
 //Первое задание
 echo "<h2>Задание №1</h2>";
 $name = "Елена";
-$age = "100";
+$age = 100;
 echo "Меня зовут $name.";
 echo "<br>";
 echo "Мне $age лет.";
@@ -30,14 +30,14 @@ echo "Я живу в $city.";
 <?php
 //Второе задание
 echo "<h2>Задание №2</h2>";
-$name = "Елена";
-$age = "100";
-echo "Меня зовут $name.";
+$name2 = "\"Елена\"";
+$age2 = 100;
+echo "Меня зовут $name2.";
 echo "<br>";
-echo "Мне $age лет.";
+echo "Мне $age2 лет.";
 echo "<br>";
-unset ($age);
-if (!isset ($age)) echo "<em>Мне 100 лет.</em>";
+unset ($age2);
+echo "<em>Мне $age2 лет.</em>";
 echo "<br><br>";
 echo "Задание №2 - дополнение";
 echo "<br>";
@@ -63,12 +63,14 @@ if (!isset ($city)) echo "<em>Я живу в Тольятти.</em>";</code>
 <?php
 //Третье задание
 echo "<h2>Задание №3</h2>";
-define("PASSWORD", "123");
+define("PASSWORD", 123);
 if (defined("PASSWORD")) {
     echo "Пароль существует!";
     echo "<br>";
     echo "Пароль - ".PASSWORD;
 }
+define("PASSWORD", 1234);
+echo "Пароль - ".PASSWORD;
 echo "<br><br>";
 echo "Задание №3 - дополнение";
 echo "<br>";
@@ -239,10 +241,8 @@ echo "<em>Пример решения:";
 echo "<br>";
 $cars = array("volvo", "bmw", "toyota", "lada", "opel", "saab", "ferrari", "volga");
 sort($cars);
-$length = count($cars);
-for($x = 0; $x < $length; $x++) {
-    echo $cars[$x];
-    echo "<br>";
+foreach ($cars as $value) {
+    echo "$value<br>";
 }
  echo "</em><br>";
 ?>
@@ -250,10 +250,8 @@ for($x = 0; $x < $length; $x++) {
 PHP код:<br> 
 $cars = array("volvo", "bmw", "toyota", "lada", "opel", "saab", "ferrari", "volga");<br>
 sort($cars);<br>
-$length = count($cars);<br>
-for($x = 0; $x < $length; $x++) {<br>
-    &nbsp;&nbsp;echo $cars[$x];<br>
-    &nbsp;&nbsp;echo "&lt;br&gt;";<br>
+foreach ($cars as $value) {<br>
+    echo "$value&lt;br&gt;";<br>
 }
 </code>
 </div>
