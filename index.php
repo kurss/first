@@ -70,6 +70,7 @@ if (defined("PASSWORD")) {
     echo "Пароль - ".PASSWORD;
 }
 define("PASSWORD", 1234);
+echo "<br>";
 echo "Пароль - ".PASSWORD;
 echo "<br><br>";
 echo "Задание №3 - дополнение";
