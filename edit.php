@@ -22,7 +22,7 @@
         <form method='post' action="<?php myServer (); ?>" >
         <input type='text' name='info2' class="form-control myInput" value="<?php myName2 ();  ?>"  readonly><br>     
         
-        <textarea name='info' rows='10' cols='30' class="form-control" <?php myAttr ();  ?> ><?php edit (); ?></textarea>
+        <textarea name='info' rows='10' cols='30' class="form-control myText" <?php myAttr ();  ?> ><?php edit (); ?></textarea>
         <br>
         <button type='submit' name='submiter' class="btn btn-info" id="hideme">Изменить файл</button>
         </form>
