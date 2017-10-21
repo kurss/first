@@ -24,7 +24,7 @@
         
         <textarea name='info' rows='10' cols='30' class="form-control myText" <?php myAttr ();  ?> ><?php edit (); ?></textarea>
         <br>
-        <button type='submit' name='submiter' class="btn btn-info" id="hideme">Изменить файл</button>
+        <button type='submit' name='submiter' class="btn btn-info">Изменить файл</button>
         </form>
     </div>
     
