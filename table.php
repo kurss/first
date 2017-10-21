@@ -19,7 +19,7 @@ if ($file != "." && $file != "..") {
         <tr>
             <td><a href="read.php?ffile=<?php echo $file;?>"><?php echo $file;?>.txt</a></td>
             <td><small><a href="edit.php?ffile2=<?php echo $file;?>">Редактировать</a></small></td>
-            <td><small><a href="<?php myServer (); ?>?ffile3=<?php echo $file;?>">Удалить</a></small></td>
+            <td><small><a href="<?php myServer (); ?>?ffile3=<?php echo $file;?>" onclick="if(!confirm('Вы уверены?')){return false};">Удалить</a></small></td>
         </tr>
 <?php 
     }
