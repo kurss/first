@@ -69,7 +69,7 @@ function edit2 () {
 }
 
 function myServer () {
-    echo $_SERVER["PHP_SELF"];
+    echo htmlspecialchars($_SERVER["PHP_SELF"]);
 }
 
 function myName () {
