@@ -11,7 +11,7 @@ function create () {
 global $dir;    
 if(isset($_POST['submiter']))  
 {    
-    $info = $_POST['info'];      
+    $info = filter_var($_POST['info'], FILTER_SANITIZE_STRING);      
     $info2 = $_POST['info2'];       
     if(!file_exists($dir)){
     mkdir($dir, 0777);
@@ -59,7 +59,7 @@ function edit2 () {
     
     if(isset($_POST['submiter'])  )  
     {   
-        $info = $_POST['info'];      
+        $info = filter_var($_POST['info'], FILTER_SANITIZE_STRING);      
         $info2 = $_POST['info2'];      
         $current = $info;
         $file_name = $dir.'/'.$info2;
